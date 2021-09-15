@@ -8,8 +8,9 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "gen": "graphql-codegen --config graphql-codegen.yml",
-    "format": "prettier --write \"**/*.{js,tsx,ts,tsx,json,md}\""
+    "gen": "graphql-codegen",
+    "format": "prettier --write .",
+    "slicemachine": "start-slicemachine --port 9999"
   },
   "dependencies": {
     "@prismicio/react": "alpha",
@@ -29,6 +30,7 @@
     "dotenv": "^10.0.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.4.0"
+    "prettier": "^2.4.0",
+    "slice-machine-ui": "file:../slice-machine/packages/slice-machine"
   }
 }
