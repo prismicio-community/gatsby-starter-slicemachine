@@ -12,7 +12,7 @@ import {
 
 import { linkResolver } from "./linkResolver";
 
-import PageTemplate from "./pages/{PrismicPage.url}";
+// import PageTemplate from "./pages/{PrismicPage.url}";
 
 /**
  * Prismic preview configuration for each repository in your app. This set of
@@ -31,7 +31,7 @@ export const unpublishedRepositoryConfigs: PrismicUnpublishedRepositoryConfigs =
       repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME!,
       linkResolver,
       componentResolver: componentResolverFromMap({
-        page: PageTemplate,
+        // page: PageTemplate,
       }),
     },
   ];

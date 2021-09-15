@@ -1,16 +1,8 @@
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/
  */
 
-import * as React from "react";
-import { PrismicPreviewProvider } from "gatsby-plugin-prismic-previews";
-
-// Styling for the preview modals.
-import "gatsby-plugin-prismic-previews/dist/styles.css";
-
-// Adds a shared React Context for Prismic preview sessions.
-export const wrapRootElement = ({ element }) => (
-  <PrismicPreviewProvider>{element}</PrismicPreviewProvider>
-);
+// wrapRootElement is defined in a shared file. It is also exported in `gatsby-ssr.js`.
+export { wrapRootElement } from "./src/wrapRootElement";
