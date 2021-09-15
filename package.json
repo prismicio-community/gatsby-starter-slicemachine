@@ -10,7 +10,9 @@
     "clean": "gatsby clean",
     "gen": "graphql-codegen",
     "format": "prettier --write .",
-    "slicemachine": "start-slicemachine --port 9999"
+    "slicemachine": "start-slicemachine --port 9999",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@prismicio/react": "alpha",
@@ -22,15 +24,23 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
     "@graphql-codegen/cli": "^2.2.0",
     "@graphql-codegen/typescript": "^2.2.2",
     "@graphql-codegen/typescript-operations": "^2.1.4",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/react": "^6.3.8",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
+    "babel-loader": "^8.2.2",
     "dotenv": "^10.0.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.4.0",
-    "slice-machine-ui": "file:../slice-machine/packages/slice-machine"
+    "slice-machine-ui": "file:../slice-machine/packages/slice-machine",
+    "storybook-addon-gatsby": "^0.0.2",
+    "typescript": "^4.4.3"
   }
 }
