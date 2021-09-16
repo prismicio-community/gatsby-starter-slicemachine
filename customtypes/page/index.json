@@ -17,23 +17,7 @@
         "config": {
           "choices": {
             "text": {
-              "type": "Slice",
-              "fieldset": "Text",
-              "description": "Rich text with headings and links",
-              "icon": "text_fields",
-              "display": "list",
-              "non-repeat": {
-                "text": {
-                  "type": "StructuredText",
-                  "config": {
-                    "multi": "paragraph, heading1, heading2, strong, em, hyperlink, embed, list-item, o-list-item",
-                    "allowTargetBlank": true,
-                    "label": "Text",
-                    "placeholder": "Text with formatting and rich content"
-                  }
-                }
-              },
-              "repeat": {}
+              "type": "SharedSlice"
             }
           }
         }
