@@ -27,7 +27,7 @@ module.exports = {
           page: require("./customtypes/page/index.json").json,
         },
         // customTypeModels,
-        // sharedSliceModels,
+        sharedSliceModels,
       },
     },
     {

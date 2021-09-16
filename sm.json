@@ -1,6 +1,6 @@
 {
-  "apiEndpoint": "https://your-repo-name.cdn.prismic.io/api/v2",
-  "libraries": ["@/src/slices"],
   "_latest": "0.0.44",
-  "storybook": "http://localhost:8888"
+  "apiEndpoint": "https://gatsby-starter-slicemachine.cdn.prismic.io/api/v2",
+  "libraries": ["@/src/slices"],
+  "storybook": "http://localhost:6006"
 }

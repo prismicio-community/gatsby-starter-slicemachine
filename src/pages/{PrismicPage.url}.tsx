@@ -21,10 +21,14 @@ import { SliceZone } from "@prismicio/react";
 import { PageTemplateQuery } from "../types.generated";
 import { repositoryConfigs } from "../prismicPreviews";
 
+import * as slices from "../slices";
+
 type PageTemplateProps = PageProps<PageTemplateQuery> &
   WithPrismicPreviewProps<PageTemplateQuery>;
 
-const sliceZoneComponents = {};
+const sliceZoneComponents = {
+  text: slices.Text,
+};
 
 const PageTemplate = ({ data }: PageTemplateProps) => (
   <SliceZone
@@ -49,12 +53,7 @@ export const query = graphql`
       _previewable
       data {
         body {
-          ... on PrismicSliceType {
-            slice_type
-          }
-          #... on PrismicSharedSliceType {
-          #  variation
-          #}
+          ...PrismicTextDefaultSlice
         }
       }
     }

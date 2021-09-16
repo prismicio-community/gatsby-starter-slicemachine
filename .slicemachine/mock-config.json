@@ -1,18 +1,5 @@
 {
-  "src/slices": {
-    "Text": {
-      "default-slice": {
-        "primary": {
-          "text": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        }
-      }
-    }
-  },
+  "src/slices": {},
   "_cts": {
     "page": {}
   }
