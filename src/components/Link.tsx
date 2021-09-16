@@ -6,8 +6,6 @@ import {
   LinkProps as InternalLinkProps,
 } from "@prismicio/react";
 
-import { linkResolver } from "../linkResolver";
-
 const GatsbyLinkShim = ({ href, ...props }: InternalLinkProps) => (
   <GatsbyLink to={href} {...props} />
 );
@@ -15,9 +13,5 @@ const GatsbyLinkShim = ({ href, ...props }: InternalLinkProps) => (
 export type LinkProps = PrismicLinkProps;
 
 export const Link = (props: LinkProps): JSX.Element => (
-  <PrismicLink
-    linkResolver={linkResolver}
-    internalComponent={GatsbyLinkShim}
-    {...props}
-  />
+  <PrismicLink internalComponent={GatsbyLinkShim} {...props} />
 );

@@ -28,6 +28,7 @@
     "@graphql-codegen/cli": "^2.2.0",
     "@graphql-codegen/typescript": "^2.2.2",
     "@graphql-codegen/typescript-operations": "^2.1.4",
+    "@prismicio/helpers": "^2.0.0-alpha.8",
     "@storybook/addon-actions": "^6.4.0-alpha.36",
     "@storybook/addon-essentials": "^6.4.0-alpha.36",
     "@storybook/addon-links": "^6.4.0-alpha.36",

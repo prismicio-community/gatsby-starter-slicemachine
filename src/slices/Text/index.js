@@ -2,13 +2,18 @@
 
 import * as React from "react";
 import { graphql } from "gatsby";
+import { PrismicRichText } from "@prismicio/react";
 
 // TODO: Implement the TextSlice component.
 //
 // → Learn how to render this component with <SliceZone>
 //   https://prismic.io/docs/technologies/template-slices-gatsby
 export default function TextSlice({ slice }) {
-  return <section>Placeholder Text ({slice.variation}) component</section>;
+  return (
+    <section>
+      <PrismicRichText field={slice.primary.text.richText} />
+    </section>
+  );
 }
 
 // TODO: Create a GraphQL fragment for each Slice variant.
@@ -22,6 +27,10 @@ export const fragment = graphql`
   fragment PrismicTextDefaultSlice on PrismicTextDefaultSlice {
     slice_type
     variation
-    # Add your fields here
+    primary {
+      text {
+        richText
+      }
+    }
   }
 `;
