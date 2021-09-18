@@ -4,7 +4,7 @@ A [Gatsby starter][gatsby-starters] configured for [Prismic][prismic] and [Slice
 
 > This starter is in very early development and is not recommended for use. It is a look into how [Slice Machine][slice-machine] may be supported within Gatsby projects.
 
-# Setup
+## Setup
 
 Run the following commands to create a new project and Prismic repository.
 
@@ -26,7 +26,7 @@ cp .env.example .env
 npm run sm
 ```
 
-# Development
+## Development
 
 **To model content and develop using mocked data**<br/>
 This command will start Slice Machine and Storybook. Slice Machine is used to model content using Custom Types and Slice. Storybook is used to develop React components for each Slice using mock content.
@@ -42,7 +42,7 @@ Once the Slice components are written, Gatsby can be started to test the site wi
 npm run develop
 ```
 
-# Deployment
+## Deployment
 
 **Prismic Models**: Pushing content models to Prismic is done within Slice Machine. Clicking the "Push to Prismic" button in each model's editing page will deploy them to the Prismic repository.
 
