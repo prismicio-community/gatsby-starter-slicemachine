@@ -5,19 +5,37 @@
  */
 
 import * as React from "react";
-import { GatsbyBrowser } from "gatsby";
+import { GatsbyBrowser, Link as GatsbyLink } from "gatsby";
 import { PrismicPreviewProvider } from "gatsby-plugin-prismic-previews";
-import { PrismicProvider } from "@prismicio/react";
+import {
+  PrismicProvider,
+  LinkProps as InternalLinkProps,
+} from "@prismicio/react";
 
-import { Link } from "./components/Link";
 import { linkResolver } from "./linkResolver";
 import { repositoryConfigs } from "./prismicPreviews";
 
-// Adds a shared React Context for Prismic preview sessions.
+/**
+ * This component is rendered for internal links when using `<PrismicLink>`.
+ * It uses Gatsby's `<Link>` component for client-side transitions.
+ */
+const GatsbyLinkShim = ({ href, ...props }: InternalLinkProps) => (
+  <GatsbyLink to={href} {...props} />
+);
+
+/**
+ * This API adds the following global React context providers:
+ *
+ * 1. PrismicProvider - Configures `@prismicio/react` components.
+ * 2. PrismicPreviewProvider - Configures `gatsby-plugin-prismic-previews`.
+ */
 export const wrapRootElement: NonNullable<GatsbyBrowser["wrapRootElement"]> = ({
   element,
 }) => (
-  <PrismicProvider internalLinkComponent={Link} linkResolver={linkResolver}>
+  <PrismicProvider
+    linkResolver={linkResolver}
+    internalLinkComponent={GatsbyLinkShim}
+  >
     <PrismicPreviewProvider repositoryConfigs={repositoryConfigs}>
       {element}
     </PrismicPreviewProvider>

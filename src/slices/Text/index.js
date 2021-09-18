@@ -16,7 +16,7 @@ export default function TextSlice({ slice }) {
   );
 }
 
-// TODO: Create a GraphQL fragment for each Slice variant.
+// TODO: Create a GraphQL inline fragment for each Slice variant.
 //
 // → Learn how to query for fields
 //   https://prismic.io/docs/technologies/retrieve-fields-and-slices-gatsby
@@ -24,13 +24,20 @@ export default function TextSlice({ slice }) {
 // → Learn how to use this GraphQL fragment
 //   https://prismic.io/docs/technologies/fragments-gatsby
 export const fragment = graphql`
-  fragment PrismicTextDefaultSlice on PrismicTextDefaultSlice {
-    slice_type
-    variation
-    primary {
-      text {
-        richText
+  fragment PrismicText on PrismicText {
+    # Fields for the DefaultSlice variation
+    ... on PrismicTextDefaultSlice {
+      primary {
+        text {
+          richText
+        }
       }
+    }
+
+    # Required fields for the SliceZone component
+    ... on PrismicSharedSliceType {
+      slice_type
+      variation
     }
   }
 `;

@@ -1,12 +1,9 @@
 /**
  * This file is used as the Prismic preview resolver page. The preview resolver
- * page routes editors from the Prismic writing room to a previewed document
- * within your app. For example, if an editor clicks the preview button for a
- * blog post in the writing room, they will land on the preview resolver page
- * within your app, which then redirects them to the blog post with previewed
- * content.
+ * page routes editors from the Prismic writing room to a previewed page within
+ * your app.
  *
- * @see https://github.com/angeloashmore/gatsby-source-prismic/blob/alpha/packages/gatsby-plugin-prismic-previews/docs/api-withPrismicPreviewResolver.md
+ * @see https://prismic.io/docs/technologies/previews-gatsby#1.-add-a-preview-resolver-page
  */
 
 import * as React from "react";
@@ -21,7 +18,7 @@ type PreviewPageProps = PageProps & WithPrismicPreviewResolverProps;
 const PreviewPage = ({ isPrismicPreview }: PreviewPageProps): JSX.Element => {
   React.useEffect(() => {
     // If a visitor lands on this page and they did not come from the Prismic
-    // writing room, redirect to the homepage.
+    // Writing Room, redirect them to the homepage.
     if (isPrismicPreview === false) {
       navigate("/");
     }
@@ -34,10 +31,4 @@ const PreviewPage = ({ isPrismicPreview }: PreviewPageProps): JSX.Element => {
   }
 };
 
-/**
- * `withPrismicPreviewResolver` will automatically redirect editors coming from
- * the Prismic writing room to the document they are previewing.
- *
- * @see https://github.com/angeloashmore/gatsby-source-prismic/blob/alpha/packages/gatsby-plugin-prismic-previews/docs/api-withPrismicPreviewResolver.md
- */
 export default withPrismicPreviewResolver(PreviewPage);

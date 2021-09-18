@@ -8,6 +8,7 @@
  * order component.
  *
  * @see https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/
+ * @see https://prismic.io/docs/technologies/previews-gatsby#2.-update-content-pages-and-templates
  */
 
 import * as React from "react";
@@ -21,12 +22,18 @@ import loadable from "@loadable/component";
 
 import { PageTemplateQuery } from "../types.generated";
 
-type PageTemplateProps = PageProps<PageTemplateQuery> &
-  WithPrismicPreviewProps<PageTemplateQuery>;
-
+/**
+ * Slice components for PrismicPageDataBody.
+ *
+ * Add or remove Slice types and their components in this map as the Slice
+ * Zone's model is updated.
+ */
 const sliceZoneComponents = {
   text: loadable(() => import("../slices/Text")),
 };
+
+type PageTemplateProps = PageProps<PageTemplateQuery> &
+  WithPrismicPreviewProps<PageTemplateQuery>;
 
 const PageTemplate = ({ data }: PageTemplateProps) => (
   <SliceZone
@@ -35,23 +42,16 @@ const PageTemplate = ({ data }: PageTemplateProps) => (
   />
 );
 
-/**
- * When a Prismic preview session is active, `withPrismicPreview` will
- * automatically provide your template with updated preview content. As editors
- * edit and save content in the Prismic writing room, the page will
- * automatically refresh to display the edited content.
- *
- * @see https://github.com/angeloashmore/gatsby-source-prismic/blob/alpha/packages/gatsby-plugin-prismic-previews/docs/api-withPrismicPreview.md
- */
 export default withPrismicPreview(PageTemplate);
 
+// Add or remove Slice fragments in `body` as the Slice Zone's model is updated.
 export const query = graphql`
   query PageTemplate($id: String!) {
     prismicPage(id: { eq: $id }) {
       _previewable
       data {
         body {
-          ...PrismicTextDefaultSlice
+          ...PrismicText
         }
       }
     }

@@ -1,12 +1,11 @@
 /**
- * This file is used as the 404 page in your app. If users go to a URL that does
- * not exist within your app, they will be shown this page.
+ * This file is used as the 404 page in your app.
  *
- * This page is also used to support Prismic preview session when viewing
- * documents that have not been published.
+ * This page is also used to support Prismic preview sessions when viewing
+ * documents that have not yet been published.
  *
  * @see https://www.gatsbyjs.com/docs/how-to/adding-common-features/add-404-page/
- * @see https://github.com/angeloashmore/gatsby-source-prismic/blob/alpha/packages/gatsby-plugin-prismic-previews/docs/api-withPrismicUnpublishedPreview.md
+ * @see https://prismic.io/docs/technologies/previews-gatsby#3.-404-not-found-page
  */
 
 import * as React from "react";
@@ -63,14 +62,4 @@ const NotFoundPage = () => {
   );
 };
 
-/**
- * When a Prismic preview session is active and an editor lands on the 404 page,
- * it means the app does not contain a page for the previewed document's URL
- * determined using your app's Link Resolver.
- *
- * `withPrismicUnpublishedPreview` will detect when a preview session is active
- * and try to display the previewed document using the configuration provided.
- *
- * @see https://github.com/angeloashmore/gatsby-source-prismic/blob/alpha/packages/gatsby-plugin-prismic-previews/docs/api-withPrismicUnpublishedPreview.md
- */
 export default withPrismicUnpublishedPreview(NotFoundPage);

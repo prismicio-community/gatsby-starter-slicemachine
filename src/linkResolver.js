@@ -1,14 +1,13 @@
 /**
  * This file contains the Link Resolver for your Prismic repository's content.
- * The Link Resolver function converts a Prismic document to a URL within your
- * app. It will be used throughout your app to determine document links and
- * support editor previews.
  *
  * Customize the `linkResolver` function to match your app's URL structure.
  *
- * This file must be written in CommonJS format (i.e. `exports.linkResolver`
- * instead of `export const linkResolver`) since it will be imported in your
- * app's `gatsby-config.js` file.
+ * @see https://prismic.io/docs/core-concepts/link-resolver-route-resolver#link-resolver
+ *
+ * NOTE: This file must be written in CommonJS format (i.e.
+ * `exports.linkResolver` instead of `export const linkResolver`) since it will
+ * be imported in your app's `gatsby-config.js` file.
  */
 
 /**
