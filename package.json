@@ -10,6 +10,7 @@
     "clean": "gatsby clean",
     "gen": "graphql-codegen",
     "format": "prettier --write .",
+    "sm": "npx concurrently \"npm:slicemachine\" \"npm:storybook\" --prefix-colors gray,redBright",
     "slicemachine": "start-slicemachine --port 9999",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -38,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.1",
     "dotenv": "^10.0.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
