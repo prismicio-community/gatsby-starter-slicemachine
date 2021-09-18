@@ -1,8 +1,6 @@
 import * as React from "react";
-import { PrismicProvider } from "@prismicio/react";
 
-import { Link } from "../src/components/Link";
-import { linkResolver } from "../src/linkResolver";
+import { wrapRootElement } from "../src/wrapRootElement";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -15,9 +13,9 @@ export const parameters = {
 };
 
 export const decorators = [
-  (Story) => (
-    <PrismicProvider linkResolver={linkResolver} internalLinkComponent={Link}>
-      <Story />
-    </PrismicProvider>
-  ),
+  (Story) =>
+    wrapRootElement({
+      element: <Story />,
+      pathname: "/",
+    }),
 ];

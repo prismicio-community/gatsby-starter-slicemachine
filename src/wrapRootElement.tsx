@@ -2,6 +2,8 @@
  * Implement Gatsby's Browser and SSR `wrapRootElement` API in this file.
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/#wrapRootElement
+ *
+ * NOTE: This export will also wrap all Storybook stories. See `../.storybook/preview`.
  */
 
 import * as React from "react";
