@@ -1,6 +1,6 @@
 {
   "_latest": "0.1.0",
-  "apiEndpoint": "https://gatsby-starter-slicemachine.cdn.prismic.io/api/v2",
+  "apiEndpoint": "https://your-repo-name.cdn.prismic.io/api/v2",
   "libraries": [
     "@/src/slices"
   ],
