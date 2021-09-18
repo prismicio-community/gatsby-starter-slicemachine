@@ -1,8 +1,8 @@
 # gatsby-starter-slicemachine
 
-A [Gatsby starter][gatsby-starters] configured for [Prismic][prismic] and [Slice Machine][slice-machine] projects.
+A [Gatsby starter][gatsby-starters] pre-configured for [Prismic][prismic] and [Slice Machine][slice-machine] projects.
 
-> This starter is in very early development and is not recommended for use. It is a look into how [Slice Machine][slice-machine] may be supported within Gatsby projects.
+> ⚠️ This starter is in very early development and is not recommended for use. It is a look into how [Slice Machine][slice-machine] may be supported within Gatsby projects.
 
 ## Setup
 
@@ -30,11 +30,8 @@ npm run sm
 
 ## Development
 
-1. **To model content and develop using mocked data**<br/>
-   This command will start Slice Machine and [Storybook][storybook].
-
-   - **Slice Machine** Model content using [Custom Types][prismic-custom-types] and [Slices][prismic-slices]
-   - **Storybook**: Develop React components for each Slice using mock content
+1. **To model content and develop [Slices][slices] using mocked data**<br/>
+   Start [Slice Machine][slice-machine] and [Storybook][storybook] with the following command.
 
    ```sh
    npm run sm
