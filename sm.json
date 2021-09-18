@@ -1,6 +1,8 @@
 {
-  "_latest": "0.0.44",
+  "_latest": "0.1.0",
   "apiEndpoint": "https://gatsby-starter-slicemachine.cdn.prismic.io/api/v2",
-  "libraries": ["@/src/slices"],
+  "libraries": [
+    "@/src/slices"
+  ],
   "storybook": "http://localhost:6006"
 }
