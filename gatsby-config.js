@@ -22,12 +22,7 @@ module.exports = {
         repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         linkResolver: require("./src/linkResolver").linkResolver,
-        schemas: {
-          "home-page": {},
-          menu: {},
-          page: require("./customtypes/page/index.json").json,
-        },
-        // customTypeModels,
+        customTypeModels,
         sharedSliceModels,
       },
     },
@@ -35,6 +30,7 @@ module.exports = {
       resolve: "gatsby-plugin-prismic-previews",
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
       },
     },
   ],
