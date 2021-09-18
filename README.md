@@ -30,31 +30,39 @@ npm run sm
 
 ## Development
 
-**To model content and develop using mocked data**<br/>
-This command will start Slice Machine and Storybook. Slice Machine is used to model content using Custom Types and Slice. Storybook is used to develop React components for each Slice using mock content.
+1. **To model content and develop using mocked data**<br/>
+   This command will start Slice Machine and [Storybook][storybook].
 
-```sh
-npm run sm
-```
+   - **Slice Machine** Model content using [Custom Types][prismic-custom-types] and [Slices][prismic-slices]
+   - **Storybook**: Develop React components for each Slice using mock content
 
-**To develop with Gatsby**<br/>
-Once the Slice components are written, Gatsby can be started to test the site with real content.
+   ```sh
+   npm run sm
+   ```
 
-```sh
-npm run develop
-```
+2. **To develop with Gatsby**<br/>
+   Once the Slice components are written, the site can be tested with real content by starting Gatsby.
+
+   ```sh
+   npm run develop
+   ```
 
 ## Deployment
 
-**Prismic Models**: Pushing content models to Prismic is done within Slice Machine. Clicking the "Push to Prismic" button in each model's editing page will deploy them to the Prismic repository.
+**Prismic Models**<br/>
+Pushing content models to Prismic is done within Slice Machine. Clicking the "Push to Prismic" button in each model's editing page will deploy them to the Prismic repository.
 
-**Gatsby Site**: The result is a standard Gatsby site. It can be hosted like any other Gatsby site. [Netlify][netlify], [Gatsby Cloud][gatsby-cloud], and [Vercel][vercel] are great options.
+**Gatsby Site**<br/>
+The resulting site is a standard Gatsby app. It can be hosted like any other Gatsby site. [Netlify][netlify], [Gatsby Cloud][gatsby-cloud], and [Vercel][vercel] are great options.
 
 <!-- Links -->
 
 [gatsby-cloud]: https://www.gatsbyjs.com/products/cloud/
 [gatsby-starters]: https://www.gatsbyjs.com/docs/starters/
 [netlify]: https://www.netlify.com/
+[prismic-custom-types]: https://prismic.io/docs/core-concepts/custom-types
+[prismic-slices]: https://prismic.io/docs/core-concepts/slices
 [prismic]: https://prismic.io/
 [slice-machine]: https://www.slicemachine.dev/
+[storybook]: https://storybook.js.org/
 [vercel]: https://vercel.com/
