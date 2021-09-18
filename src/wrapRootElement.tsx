@@ -11,12 +11,15 @@ import { PrismicProvider } from "@prismicio/react";
 
 import { Link } from "./components/Link";
 import { linkResolver } from "./linkResolver";
+import { repositoryConfigs } from "./prismicPreviews";
 
 // Adds a shared React Context for Prismic preview sessions.
 export const wrapRootElement: NonNullable<GatsbyBrowser["wrapRootElement"]> = ({
   element,
 }) => (
   <PrismicProvider internalLinkComponent={Link} linkResolver={linkResolver}>
-    <PrismicPreviewProvider>{element}</PrismicPreviewProvider>
+    <PrismicPreviewProvider repositoryConfigs={repositoryConfigs}>
+      {element}
+    </PrismicPreviewProvider>
   </PrismicProvider>
 );

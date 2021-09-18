@@ -17,17 +17,15 @@ import {
   WithPrismicPreviewProps,
 } from "gatsby-plugin-prismic-previews";
 import { SliceZone } from "@prismicio/react";
+import loadable from "@loadable/component";
 
 import { PageTemplateQuery } from "../types.generated";
-import { repositoryConfigs } from "../prismicPreviews";
-
-import * as slices from "../slices";
 
 type PageTemplateProps = PageProps<PageTemplateQuery> &
   WithPrismicPreviewProps<PageTemplateQuery>;
 
 const sliceZoneComponents = {
-  text: slices.Text,
+  text: loadable(() => import("../slices/Text")),
 };
 
 const PageTemplate = ({ data }: PageTemplateProps) => (
@@ -45,7 +43,7 @@ const PageTemplate = ({ data }: PageTemplateProps) => (
  *
  * @see https://github.com/angeloashmore/gatsby-source-prismic/blob/alpha/packages/gatsby-plugin-prismic-previews/docs/api-withPrismicPreview.md
  */
-export default withPrismicPreview(PageTemplate, repositoryConfigs);
+export default withPrismicPreview(PageTemplate);
 
 export const query = graphql`
   query PageTemplate($id: String!) {

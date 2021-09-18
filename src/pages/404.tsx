@@ -13,8 +13,6 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { withPrismicUnpublishedPreview } from "gatsby-plugin-prismic-previews";
 
-import { unpublishedRepositoryConfigs } from "../prismicUnpublishedPreviews";
-
 // styles
 const pageStyles = {
   color: "#232129",
@@ -75,7 +73,4 @@ const NotFoundPage = () => {
  *
  * @see https://github.com/angeloashmore/gatsby-source-prismic/blob/alpha/packages/gatsby-plugin-prismic-previews/docs/api-withPrismicUnpublishedPreview.md
  */
-export default withPrismicUnpublishedPreview(
-  NotFoundPage,
-  unpublishedRepositoryConfigs
-);
+export default withPrismicUnpublishedPreview(NotFoundPage);

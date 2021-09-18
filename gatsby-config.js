@@ -15,6 +15,7 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
   },
   plugins: [
+    "gatsby-plugin-loadable-components-ssr",
     {
       resolve: "gatsby-source-prismic",
       options: {
