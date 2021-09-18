@@ -30,7 +30,7 @@ npm run sm
 
 ## Development
 
-1. **To model content and develop [Slices][slices] using mocked data**<br/>
+1. **To model content and develop [Slices][prismic-slices] using mocked data**<br/>
    Start [Slice Machine][slice-machine] and [Storybook][storybook] with the following command.
 
    ```sh
