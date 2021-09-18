@@ -47,10 +47,10 @@ npm run sm
 ## Deployment
 
 **Prismic Models**<br/>
-Pushing content models to Prismic is done within Slice Machine. Clicking the "Push to Prismic" button in each model's editing page will deploy them to the Prismic repository.
+Pushing content models to Prismic is done within Slice Machine. Clicking the "Push to Prismic" button in each model's editing page will deploy it to the Prismic repository.
 
 **Gatsby Site**<br/>
-The resulting site is a standard Gatsby app. It can be hosted like any other Gatsby site. [Netlify][netlify], [Gatsby Cloud][gatsby-cloud], and [Vercel][vercel] are great options.
+The resulting site is a standard Gatsby app. It can be hosted like any other Gatsby app. [Netlify][netlify], [Gatsby Cloud][gatsby-cloud], and [Vercel][vercel] are great options.
 
 <!-- Links -->
 
