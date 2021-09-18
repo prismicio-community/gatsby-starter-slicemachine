@@ -12,7 +12,7 @@
     "format": "prettier --write .",
     "sm": "npx concurrently \"npm:slicemachine\" \"npm:storybook\" --prefix-colors gray,redBright",
     "sm:login": "npx prismic-cli@latest login",
-    "sm:start": "start-slicemachine --port 9999",
+    "slicemachine": "start-slicemachine --port 9999",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
