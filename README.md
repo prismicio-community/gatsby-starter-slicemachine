@@ -1,4 +1,4 @@
-# gatsby-starter-slicemachine
+# 🍰 gatsby-starter-slicemachine
 
 A [Gatsby starter][gatsby-starters] pre-configured for [Prismic][prismic] and [Slice Machine][slice-machine] projects.
 
