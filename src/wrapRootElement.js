@@ -7,12 +7,9 @@
  */
 
 import * as React from "react";
-import { GatsbyBrowser, Link as GatsbyLink } from "gatsby";
+import { Link as GatsbyLink } from "gatsby";
 import { PrismicPreviewProvider } from "gatsby-plugin-prismic-previews";
-import {
-  PrismicProvider,
-  LinkProps as InternalLinkProps,
-} from "@prismicio/react";
+import { PrismicProvider } from "@prismicio/react";
 
 import { linkResolver } from "./linkResolver";
 import { repositoryConfigs } from "./prismicPreviews";
@@ -21,7 +18,7 @@ import { repositoryConfigs } from "./prismicPreviews";
  * This component is rendered for internal links when using `<PrismicLink>`.
  * It uses Gatsby's `<Link>` component for client-side transitions.
  */
-const GatsbyLinkShim = ({ href, ...props }: InternalLinkProps) => (
+const GatsbyLinkShim = ({ href, ...props }) => (
   <GatsbyLink to={href} {...props} />
 );
 
@@ -31,9 +28,7 @@ const GatsbyLinkShim = ({ href, ...props }: InternalLinkProps) => (
  * 1. PrismicProvider - Configures `@prismicio/react` components.
  * 2. PrismicPreviewProvider - Configures `gatsby-plugin-prismic-previews`.
  */
-export const wrapRootElement: NonNullable<GatsbyBrowser["wrapRootElement"]> = ({
-  element,
-}) => (
+export const wrapRootElement = ({ element }) => (
   <PrismicProvider
     linkResolver={linkResolver}
     internalLinkComponent={GatsbyLinkShim}

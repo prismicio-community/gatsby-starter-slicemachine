@@ -7,15 +7,10 @@
  */
 
 import * as React from "react";
-import { navigate, PageProps } from "gatsby";
-import {
-  withPrismicPreviewResolver,
-  WithPrismicPreviewResolverProps,
-} from "gatsby-plugin-prismic-previews";
+import { navigate } from "gatsby";
+import { withPrismicPreviewResolver } from "gatsby-plugin-prismic-previews";
 
-type PreviewPageProps = PageProps & WithPrismicPreviewResolverProps;
-
-const PreviewPage = ({ isPrismicPreview }: PreviewPageProps): JSX.Element => {
+const PreviewPage = ({ isPrismicPreview }) => {
   React.useEffect(() => {
     // If a visitor lands on this page and they did not come from the Prismic
     // Writing Room, redirect them to the homepage.

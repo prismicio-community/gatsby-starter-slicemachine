@@ -12,15 +12,10 @@
  */
 
 import * as React from "react";
-import { graphql, PageProps } from "gatsby";
-import {
-  withPrismicPreview,
-  WithPrismicPreviewProps,
-} from "gatsby-plugin-prismic-previews";
+import { graphql } from "gatsby";
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
 import { SliceZone } from "@prismicio/react";
 import loadable from "@loadable/component";
-
-import { PageTemplateQuery } from "../types.generated";
 
 /**
  * Slice components for PrismicPageDataBody.
@@ -32,10 +27,7 @@ const sliceZoneComponents = {
   text: loadable(() => import("../slices/Text")),
 };
 
-type PageTemplateProps = PageProps<PageTemplateQuery> &
-  WithPrismicPreviewProps<PageTemplateQuery>;
-
-const PageTemplate = ({ data }: PageTemplateProps) => (
+const PageTemplate = ({ data }) => (
   <SliceZone
     slices={data.prismicPage?.data.body}
     components={sliceZoneComponents}
